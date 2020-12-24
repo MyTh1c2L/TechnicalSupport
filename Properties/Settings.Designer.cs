@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TechnicalSupport.Properties
+namespace TechnicalSupport.Demo.Properties
 {
 
 
