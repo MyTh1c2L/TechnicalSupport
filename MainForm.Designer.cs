@@ -3,14 +3,14 @@
     partial class MainForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Освободить все используемые ресурсы.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,285 +20,258 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Требуемый метод для поддержки конструктора — не изменяйте 
+        /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ProblemBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TariffBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Speedlabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
-            this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
-            this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
-            this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
-            this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.открытьНовуюБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.бДПроблемИИхРешенийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.бДТарифовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ProblemText = new System.Windows.Forms.TextBox();
-            this.TariffText = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SpeedLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ProblemButton = new System.Windows.Forms.Button();
+            this.TarifButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dbproblem = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dbtarif = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ProblemBox
+            // menuStrip1
             // 
-            this.ProblemBox.FormattingEnabled = true;
-            this.ProblemBox.Location = new System.Drawing.Point(10, 44);
-            this.ProblemBox.Margin = new System.Windows.Forms.Padding(2);
-            this.ProblemBox.Name = "ProblemBox";
-            this.ProblemBox.Size = new System.Drawing.Size(259, 23);
-            this.ProblemBox.TabIndex = 0;
-            this.ProblemBox.SelectedIndexChanged += new System.EventHandler(this.ProblemBox_SelectedIndexChanged);
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.справкаToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(860, 26);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // справкаToolStripMenuItem
+            // 
+            this.справкаToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.справкаToolStripMenuItem.Text = "Справка";
+            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
             // label1
             // 
-            this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(550, 257);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 15);
+            this.label1.Size = new System.Drawing.Size(207, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Выберите вашу проблему:";
+            this.label1.Text = "Скорость интернет соединения:";
             // 
-            // button1
+            // SpeedLabel
             // 
-            this.button1.Location = new System.Drawing.Point(10, 490);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 25);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Проблема не решена";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SpeedLabel.AutoSize = true;
+            this.SpeedLabel.ForeColor = System.Drawing.Color.Blue;
+            this.SpeedLabel.Location = new System.Drawing.Point(609, 283);
+            this.SpeedLabel.Name = "SpeedLabel";
+            this.SpeedLabel.Size = new System.Drawing.Size(77, 16);
+            this.SpeedLabel.TabIndex = 2;
+            this.SpeedLabel.Text = "000,00 КБ/с";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 473);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(93, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(261, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Если вы не нашли решение своей проблемы:";
-            // 
-            // TariffBox
-            // 
-            this.TariffBox.FormattingEnabled = true;
-            this.TariffBox.Location = new System.Drawing.Point(10, 268);
-            this.TariffBox.Margin = new System.Windows.Forms.Padding(2);
-            this.TariffBox.Name = "TariffBox";
-            this.TariffBox.Size = new System.Drawing.Size(255, 23);
-            this.TariffBox.TabIndex = 5;
-            this.TariffBox.SelectedIndexChanged += new System.EventHandler(this.TariffBox_SelectedIndexChanged);
+            this.label2.Size = new System.Drawing.Size(214, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Найти решение своей проблемы:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(548, 473);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(119, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Скорость интернет соединения:";
+            this.label3.Size = new System.Drawing.Size(205, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Информация про наши тарифы:";
             // 
-            // Speedlabel
+            // ProblemButton
             // 
-            this.Speedlabel.AutoSize = true;
-            this.Speedlabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Speedlabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Speedlabel.Location = new System.Drawing.Point(548, 493);
-            this.Speedlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Speedlabel.Name = "Speedlabel";
-            this.Speedlabel.Size = new System.Drawing.Size(45, 17);
-            this.Speedlabel.TabIndex = 7;
-            this.Speedlabel.Text = "0 Кб/с";
+            this.ProblemButton.Location = new System.Drawing.Point(7, 40);
+            this.ProblemButton.Name = "ProblemButton";
+            this.ProblemButton.Size = new System.Drawing.Size(400, 81);
+            this.ProblemButton.TabIndex = 5;
+            this.ProblemButton.Text = "Нажми на меня!";
+            this.ProblemButton.UseVisualStyleBackColor = true;
+            this.ProblemButton.Click += new System.EventHandler(this.ProblemButton_Click);
+            // 
+            // TarifButton
+            // 
+            this.TarifButton.Location = new System.Drawing.Point(7, 40);
+            this.TarifButton.Name = "TarifButton";
+            this.TarifButton.Size = new System.Drawing.Size(400, 81);
+            this.TarifButton.TabIndex = 6;
+            this.TarifButton.Text = "Нажми на меня!";
+            this.TarifButton.UseVisualStyleBackColor = true;
+            this.TarifButton.Click += new System.EventHandler(this.TarifButton_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dbproblem);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.ProblemButton);
+            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(414, 195);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            // 
+            // dbproblem
+            // 
+            this.dbproblem.Location = new System.Drawing.Point(10, 151);
+            this.dbproblem.Name = "dbproblem";
+            this.dbproblem.Size = new System.Drawing.Size(395, 29);
+            this.dbproblem.TabIndex = 10;
+            this.dbproblem.Text = "Открыть";
+            this.dbproblem.UseVisualStyleBackColor = true;
+            this.dbproblem.Click += new System.EventHandler(this.dbproblem_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 247);
+            this.label5.Location = new System.Drawing.Point(7, 129);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 15);
+            this.label5.Size = new System.Drawing.Size(149, 16);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Узнайте больше про тарифы:";
+            this.label5.Text = "Загрузить базу данных:";
             // 
-            // BottomToolStripPanel
+            // groupBox2
             // 
-            this.BottomToolStripPanel.Location = new System.Drawing.Point(0, 0);
-            this.BottomToolStripPanel.Name = "BottomToolStripPanel";
-            this.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.BottomToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.BottomToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.dbtarif);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.TarifButton);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBox2.Location = new System.Drawing.Point(433, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(414, 195);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
             // 
-            // RightToolStripPanel
+            // dbtarif
             // 
-            this.RightToolStripPanel.Location = new System.Drawing.Point(0, 0);
-            this.RightToolStripPanel.Name = "RightToolStripPanel";
-            this.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.RightToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.RightToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            this.dbtarif.Location = new System.Drawing.Point(12, 151);
+            this.dbtarif.Name = "dbtarif";
+            this.dbtarif.Size = new System.Drawing.Size(395, 29);
+            this.dbtarif.TabIndex = 8;
+            this.dbtarif.Text = "Открыть";
+            this.dbtarif.UseVisualStyleBackColor = true;
+            this.dbtarif.Click += new System.EventHandler(this.dbtarif_Click);
             // 
-            // LeftToolStripPanel
+            // label4
             // 
-            this.LeftToolStripPanel.Location = new System.Drawing.Point(0, 0);
-            this.LeftToolStripPanel.Name = "LeftToolStripPanel";
-            this.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.LeftToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.LeftToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Загрузить базу данных:";
             // 
-            // ContentPanel
+            // label6
             // 
-            this.ContentPanel.Size = new System.Drawing.Size(916, 28);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 232);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 16);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Обратная связь:";
             // 
-            // TopToolStripPanel
+            // textBox1
             // 
-            this.TopToolStripPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopToolStripPanel.Name = "TopToolStripPanel";
-            this.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.TopToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.TopToolStripPanel.Size = new System.Drawing.Size(0, 0);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.открытьНовуюБДToolStripMenuItem,
-            this.справкаToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(749, 24);
-            this.menuStrip1.TabIndex = 10;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // открытьНовуюБДToolStripMenuItem
-            // 
-            this.открытьНовуюБДToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.бДПроблемИИхРешенийToolStripMenuItem,
-            this.бДТарифовToolStripMenuItem});
-            this.открытьНовуюБДToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.открытьНовуюБДToolStripMenuItem.Name = "открытьНовуюБДToolStripMenuItem";
-            this.открытьНовуюБДToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.открытьНовуюБДToolStripMenuItem.Text = "Обновить БД";
-            // 
-            // бДПроблемИИхРешенийToolStripMenuItem
-            // 
-            this.бДПроблемИИхРешенийToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.бДПроблемИИхРешенийToolStripMenuItem.Name = "бДПроблемИИхРешенийToolStripMenuItem";
-            this.бДПроблемИИхРешенийToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
-            this.бДПроблемИИхРешенийToolStripMenuItem.Text = "БД проблем и их решений";
-            this.бДПроблемИИхРешенийToolStripMenuItem.Click += new System.EventHandler(this.бДПроблемИИхРешенийToolStripMenuItem_Click);
-            // 
-            // бДТарифовToolStripMenuItem
-            // 
-            this.бДТарифовToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.бДТарифовToolStripMenuItem.Name = "бДТарифовToolStripMenuItem";
-            this.бДТарифовToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
-            this.бДТарифовToolStripMenuItem.Text = "БД тарифов";
-            this.бДТарифовToolStripMenuItem.Click += new System.EventHandler(this.бДТарифовToolStripMenuItem_Click);
-            // 
-            // справкаToolStripMenuItem
-            // 
-            this.справкаToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.справкаToolStripMenuItem.Text = "Справка";
-            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
-            // 
-            // ProblemText
-            // 
-            this.ProblemText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ProblemText.Location = new System.Drawing.Point(10, 75);
-            this.ProblemText.Multiline = true;
-            this.ProblemText.Name = "ProblemText";
-            this.ProblemText.ReadOnly = true;
-            this.ProblemText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ProblemText.Size = new System.Drawing.Size(721, 168);
-            this.ProblemText.TabIndex = 11;
-            // 
-            // TariffText
-            // 
-            this.TariffText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TariffText.Location = new System.Drawing.Point(10, 299);
-            this.TariffText.Multiline = true;
-            this.TariffText.Name = "TariffText";
-            this.TariffText.ReadOnly = true;
-            this.TariffText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TariffText.Size = new System.Drawing.Size(721, 170);
-            this.TariffText.TabIndex = 12;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(13, 252);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(412, 109);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Text = "Номера справочной службы:\r\n+7 (3412) 553-535\r\n+7 (3412) 553-123\r\n\r\nEmail:\r\ntechsu" +
+    "pport@ya.ru";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(749, 534);
-            this.Controls.Add(this.TariffText);
-            this.Controls.Add(this.ProblemText);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.Speedlabel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.TariffBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(860, 377);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.SpeedLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ProblemBox);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.HelpButton = true;
+            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(876, 416);
+            this.MinimumSize = new System.Drawing.Size(876, 416);
             this.Name = "MainForm";
             this.Text = "Техническая поддержка абонентов";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Label Speedlabel;
-        private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
-        private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
-        private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
-        private System.Windows.Forms.ToolStripContentPanel ContentPanel;
-        private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
+
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        public System.Windows.Forms.ComboBox ProblemBox;
-        public System.Windows.Forms.ComboBox TariffBox;
-        private System.Windows.Forms.ToolStripMenuItem открытьНовуюБДToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem бДПроблемИИхРешенийToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem бДТарифовToolStripMenuItem;
-        private System.Windows.Forms.TextBox ProblemText;
-        private System.Windows.Forms.TextBox TariffText;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SpeedLabel;
         private System.Windows.Forms.Timer timer1;
-        public System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button ProblemButton;
+        private System.Windows.Forms.Button TarifButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button dbproblem;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button dbtarif;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

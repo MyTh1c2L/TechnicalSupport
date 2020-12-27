@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace TechnicalSupport
-{   
+{
     public class Internet
     {
         public double InternetSpeed()
@@ -24,6 +24,4 @@ namespace TechnicalSupport
             return textspeed;
         }
     }
-
-
 }

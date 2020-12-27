@@ -6,7 +6,7 @@ namespace TechnicalSupport
     {
         static List<string> ProblemList = new List<string>();
 
-        static List<string> TariffList = new List<string>();
+        static List<string> TarifList = new List<string>();
 
         public static void Initialize1(List<string> List)
         {
@@ -20,7 +20,7 @@ namespace TechnicalSupport
         {
             for (int i = 1; i < List.Count; i += 2)
             {
-                TariffList.Add(List[i]);
+                TarifList.Add(List[i]);
             }
         }
 
@@ -29,9 +29,9 @@ namespace TechnicalSupport
             return ProblemList[index];
         }
 
-        public static string Tariff(int index)
+        public static string Tarif(int index)
         {
-            return TariffList[index];
+            return TarifList[index];
         }
     }
 }
