@@ -14,6 +14,18 @@ namespace TechnicalSupport
         public MainForm()
         {
             InitializeComponent();
+
+            hf = new HelpForm();
+        }
+
+        private void ProblemFormClosed(object sender, EventArgs e)
+        {
+            pf = null;
+        }
+
+        private void TarifFormClosed(object sender, EventArgs e)
+        {
+            tf = null;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -36,8 +48,7 @@ namespace TechnicalSupport
 
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hf = new HelpForm();
-            hf.Show();
+            hf.Visible = true;
         }
 
         private async void timer1_Tick(object sender, EventArgs e)
@@ -52,20 +63,31 @@ namespace TechnicalSupport
 
         private void ProblemButton_Click(object sender, EventArgs e)
         {
-            pf = new ProblemForm();
-            pf.Show();
+            if(pf == null)
+            {
+                pf = new ProblemForm();
+                pf.FormClosed += new FormClosedEventHandler(ProblemFormClosed);
+                pf.Show();
+            }
         }
 
         private void TarifButton_Click(object sender, EventArgs e)
         {
-            tf = new TarifForm();
-            tf.Show();
+            if (tf == null)
+            {
+                tf = new TarifForm();
+                tf.FormClosed += new FormClosedEventHandler(TarifFormClosed);
+                tf.Show();
+            }
         }
 
         private void dbproblem_Click(object sender, EventArgs e)
         {
             if (pf != null)
+            {
                 pf.Close();
+                pf = null;
+            }
 
             string filePath = "";
             OpenFileDialog ofd = new OpenFileDialog();
@@ -87,8 +109,11 @@ namespace TechnicalSupport
         private void dbtarif_Click(object sender, EventArgs e)
         {
             if (tf != null)
+            { 
                 tf.Close();
-
+                tf = null;
+            }
+                
             string filePath = "";
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "txt files (*.txt)|*.txt";

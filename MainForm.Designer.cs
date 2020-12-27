@@ -75,7 +75,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(550, 257);
+            this.label1.Location = new System.Drawing.Point(552, 266);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 16);
             this.label1.TabIndex = 1;
@@ -84,10 +84,11 @@
             // SpeedLabel
             // 
             this.SpeedLabel.AutoSize = true;
+            this.SpeedLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SpeedLabel.ForeColor = System.Drawing.Color.Blue;
-            this.SpeedLabel.Location = new System.Drawing.Point(609, 283);
+            this.SpeedLabel.Location = new System.Drawing.Point(606, 292);
             this.SpeedLabel.Name = "SpeedLabel";
-            this.SpeedLabel.Size = new System.Drawing.Size(77, 16);
+            this.SpeedLabel.Size = new System.Drawing.Size(98, 19);
             this.SpeedLabel.TabIndex = 2;
             this.SpeedLabel.Text = "000,00 КБ/с";
             // 

@@ -25,7 +25,7 @@ namespace TechnicalSupport
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            Visible = false;
         }
     }
 }
