@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TarifForm));
             this.button1 = new System.Windows.Forms.Button();
-            this.TarifText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TarifBox = new System.Windows.Forms.ComboBox();
+            this.TarifText = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -45,15 +47,6 @@
             this.button1.Text = "Закрыть";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // TarifText
-            // 
-            this.TarifText.Location = new System.Drawing.Point(14, 44);
-            this.TarifText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TarifText.Multiline = true;
-            this.TarifText.Name = "TarifText";
-            this.TarifText.Size = new System.Drawing.Size(583, 346);
-            this.TarifText.TabIndex = 7;
             // 
             // label1
             // 
@@ -74,23 +67,43 @@
             this.TarifBox.TabIndex = 5;
             this.TarifBox.SelectedIndexChanged += new System.EventHandler(this.TarifBox_SelectedIndexChanged);
             // 
+            // TarifText
+            // 
+            this.TarifText.AutoEllipsis = true;
+            this.TarifText.Location = new System.Drawing.Point(6, 10);
+            this.TarifText.Name = "TarifText";
+            this.TarifText.Size = new System.Drawing.Size(570, 335);
+            this.TarifText.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.TarifText);
+            this.groupBox1.Location = new System.Drawing.Point(17, 42);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(580, 348);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            // 
             // TarifForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 438);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.TarifText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TarifBox);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(625, 477);
             this.MinimumSize = new System.Drawing.Size(625, 477);
             this.Name = "TarifForm";
             this.Text = "Информация о тарифных планах";
             this.Load += new System.EventHandler(this.TarifForm_Load);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,8 +112,9 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox TarifText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox TarifBox;
+        private System.Windows.Forms.Label TarifText;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

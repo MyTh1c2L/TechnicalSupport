@@ -29,20 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpForm));
-            this.HelpText = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.HelpText = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // HelpText
-            // 
-            this.HelpText.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HelpText.Location = new System.Drawing.Point(14, 15);
-            this.HelpText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpText.Multiline = true;
-            this.HelpText.Name = "HelpText";
-            this.HelpText.ReadOnly = true;
-            this.HelpText.Size = new System.Drawing.Size(382, 319);
-            this.HelpText.TabIndex = 0;
             // 
             // button1
             // 
@@ -55,14 +46,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.HelpText);
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(383, 322);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
+            // HelpText
+            // 
+            this.HelpText.AutoEllipsis = true;
+            this.HelpText.Location = new System.Drawing.Point(6, 11);
+            this.HelpText.Name = "HelpText";
+            this.HelpText.Size = new System.Drawing.Size(371, 308);
+            this.HelpText.TabIndex = 7;
+            this.HelpText.UseCompatibleTextRendering = true;
+            // 
             // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 386);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.HelpText);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -71,14 +80,14 @@
             this.Name = "HelpForm";
             this.Text = "Справка";
             this.Load += new System.EventHandler(this.HelpForm_Load);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox HelpText;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label HelpText;
     }
 }

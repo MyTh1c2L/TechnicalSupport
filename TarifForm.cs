@@ -30,7 +30,7 @@ namespace TechnicalSupport
             string text = DataBase.Tarif(index);
 
             var TarifList = text.Split('\\').ToList();
-            TarifText.Clear();
+            TarifText.Text = "";
 
             for (int j = 0; j < TarifList.Count(); j++)
             {

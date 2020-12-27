@@ -30,7 +30,7 @@ namespace TechnicalSupport
             string text = DataBase.Problem(index);
 
             var ProblemList = text.Split('\\').ToList();
-            ProblemText.Clear();
+            ProblemText.Text = "";
 
             for (int j = 0; j < ProblemList.Count(); j++)
             {
