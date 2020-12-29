@@ -1,11 +1,14 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace TechnicalSupport
 {
     public partial class ProblemForm : Form
     {
+        SettingsJSON ConectionSettings;
+
         public ProblemForm()
         {
             InitializeComponent();
@@ -13,28 +16,25 @@ namespace TechnicalSupport
 
         private void ProblemForm_Load(object sender, EventArgs e)
         {
-            var ProblemList = System.IO.File.ReadLines("Problem.txt").ToList();
-            DataBase.Initialize1(ProblemList);
+            ConectionSettings = (SettingsJSON)new WorkWithFileJson().GetJSONDataWithFile(@"JSONFile/DataBase.json", typeof(SettingsJSON));
 
-            for (int i = 0; i < ProblemList.Count; i += 2)
+            for (int i = 0; i < ConectionSettings.DataBase.Problem.nameProblem.Count; i++)
             {
-                string NameText = ProblemList[i];
-
-                ProblemBox.Items.Add(NameText);
+                ProblemBox.Items.Add(ConectionSettings.DataBase.Problem.nameProblem[i]);
             }
         }
 
         private void ProblemBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = ProblemBox.SelectedIndex;
-            string text = DataBase.Problem(index);
 
-            var ProblemList = text.Split('\\').ToList();
             ProblemText.Text = "";
 
-            for (int j = 0; j < ProblemList.Count(); j++)
+            List<string> reshProblem = ConectionSettings.DataBase.Problem.ListReshProblem[index];
+
+            for (int i = 0; i < reshProblem.Count; i++)
             {
-                ProblemText.Text += ProblemList[j].ToString() + "\r\n";
+                ProblemText.Text += reshProblem[i] + "\r\n\r\n";
             }
         }
 

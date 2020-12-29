@@ -39,7 +39,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 397);
+            this.button1.Location = new System.Drawing.Point(12, 421);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(585, 28);
@@ -60,10 +60,10 @@
             // TarifBox
             // 
             this.TarifBox.FormattingEnabled = true;
-            this.TarifBox.Location = new System.Drawing.Point(131, 11);
+            this.TarifBox.Location = new System.Drawing.Point(17, 35);
             this.TarifBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TarifBox.Name = "TarifBox";
-            this.TarifBox.Size = new System.Drawing.Size(466, 24);
+            this.TarifBox.Size = new System.Drawing.Size(578, 24);
             this.TarifBox.TabIndex = 5;
             this.TarifBox.SelectedIndexChanged += new System.EventHandler(this.TarifBox_SelectedIndexChanged);
             // 
@@ -79,7 +79,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.TarifText);
-            this.groupBox1.Location = new System.Drawing.Point(17, 42);
+            this.groupBox1.Location = new System.Drawing.Point(15, 66);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(580, 348);
             this.groupBox1.TabIndex = 10;
@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 438);
+            this.ClientSize = new System.Drawing.Size(609, 468);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -98,8 +98,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(625, 477);
-            this.MinimumSize = new System.Drawing.Size(625, 477);
+            this.MaximumSize = new System.Drawing.Size(625, 507);
+            this.MinimumSize = new System.Drawing.Size(625, 507);
             this.Name = "TarifForm";
             this.Text = "Информация о тарифных планах";
             this.Load += new System.EventHandler(this.TarifForm_Load);

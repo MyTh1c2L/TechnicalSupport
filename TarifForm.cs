@@ -1,11 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace TechnicalSupport
 {
     public partial class TarifForm : Form
     {
+        SettingsJSON ConectionSettings;
+
         public TarifForm()
         {
             InitializeComponent();
@@ -13,28 +15,25 @@ namespace TechnicalSupport
 
         private void TarifForm_Load(object sender, EventArgs e)
         {
-            var TarifList = System.IO.File.ReadLines("Tarif.txt").ToList();
-            DataBase.Initialize2(TarifList);
+            ConectionSettings = (SettingsJSON)new WorkWithFileJson().GetJSONDataWithFile(@"JSONFile/DataBase.json", typeof(SettingsJSON));
 
-            for (int i = 0; i < TarifList.Count; i += 2)
+            for (int i = 0; i < ConectionSettings.DataBase.Tarif.nameTarif.Count; i++)
             {
-                string NameText = TarifList[i];
-
-                TarifBox.Items.Add(NameText);
+                TarifBox.Items.Add(ConectionSettings.DataBase.Tarif.nameTarif[i]);
             }
         }
 
         private void TarifBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = TarifBox.SelectedIndex;
-            string text = DataBase.Tarif(index);
 
-            var TarifList = text.Split('\\').ToList();
             TarifText.Text = "";
 
-            for (int j = 0; j < TarifList.Count(); j++)
+            List<string> textTarif = ConectionSettings.DataBase.Tarif.ListTextTarif[index];
+
+            for (int i = 0; i < textTarif.Count; i++)
             {
-                TarifText.Text += TarifList[j].ToString() + "\r\n";
+                TarifText.Text += textTarif[i] + "\r\n\r\n";
             }
         }
 

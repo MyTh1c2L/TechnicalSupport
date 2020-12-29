@@ -40,10 +40,10 @@
             // ProblemBox
             // 
             this.ProblemBox.FormattingEnabled = true;
-            this.ProblemBox.Location = new System.Drawing.Point(192, 13);
+            this.ProblemBox.Location = new System.Drawing.Point(17, 40);
             this.ProblemBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProblemBox.Name = "ProblemBox";
-            this.ProblemBox.Size = new System.Drawing.Size(405, 24);
+            this.ProblemBox.Size = new System.Drawing.Size(578, 24);
             this.ProblemBox.TabIndex = 0;
             this.ProblemBox.SelectedIndexChanged += new System.EventHandler(this.ProblemBox_SelectedIndexChanged);
             // 
@@ -58,7 +58,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 397);
+            this.button1.Location = new System.Drawing.Point(8, 424);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(587, 28);
@@ -70,25 +70,25 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ProblemText);
-            this.groupBox1.Location = new System.Drawing.Point(17, 44);
+            this.groupBox1.Location = new System.Drawing.Point(17, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(580, 346);
+            this.groupBox1.Size = new System.Drawing.Size(578, 346);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
             // ProblemText
             // 
             this.ProblemText.AutoEllipsis = true;
-            this.ProblemText.Location = new System.Drawing.Point(6, 9);
+            this.ProblemText.Location = new System.Drawing.Point(5, 12);
             this.ProblemText.Name = "ProblemText";
-            this.ProblemText.Size = new System.Drawing.Size(570, 334);
+            this.ProblemText.Size = new System.Drawing.Size(572, 331);
             this.ProblemText.TabIndex = 0;
             // 
             // ProblemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 438);
+            this.ClientSize = new System.Drawing.Size(609, 468);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -97,8 +97,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(625, 477);
-            this.MinimumSize = new System.Drawing.Size(625, 477);
+            this.MaximumSize = new System.Drawing.Size(625, 507);
+            this.MinimumSize = new System.Drawing.Size(625, 507);
             this.Name = "ProblemForm";
             this.Text = "Решение вашей проблемы";
             this.Load += new System.EventHandler(this.ProblemForm_Load);
