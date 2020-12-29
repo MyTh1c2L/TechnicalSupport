@@ -1,5 +1,6 @@
-﻿using System;
-using System.Linq;
+using System;
+using System.IO;
+using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,6 +11,7 @@ namespace TechnicalSupport
         HelpForm hf;
         ProblemForm pf;
         TarifForm tf;
+        SettingsJSON ConectionSettings;
 
         public MainForm()
         {
@@ -30,16 +32,22 @@ namespace TechnicalSupport
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (!System.IO.File.Exists("Problem.txt"))
+            if (new WorkWithFileJson().GetJSONDataWithFile(@"JSONFile/DataBase.json", typeof(SettingsJSON)) == "Нет файла")
             {
                 ProblemButton.Text = "База данных не найдена";
-                ProblemButton.Enabled = false;
-            }
-
-            if (!System.IO.File.Exists("Tarif.txt"))
-            {
                 TarifButton.Text = "База данных не найдена";
+                ProblemButton.Enabled = false;
                 TarifButton.Enabled = false;
+            }
+            else
+            {
+                ConectionSettings = (SettingsJSON)new WorkWithFileJson().GetJSONDataWithFile(@"JSONFile/DataBase.json", typeof(SettingsJSON));
+
+                for (int i = 0; i < ConectionSettings.DataBase.Communication.phone.Count; i++)
+                    phoneTextBox.Text += ConectionSettings.DataBase.Communication.phone[i] + "\r\n";
+
+                for (int i = 0; i < ConectionSettings.DataBase.Communication.email.Count; i++)
+                    emailTextBox.Text += ConectionSettings.DataBase.Communication.email[i] + "\r\n";
             }
 
             timer1.Enabled = true;
@@ -81,7 +89,7 @@ namespace TechnicalSupport
             }
         }
 
-        private void dbproblem_Click(object sender, EventArgs e)
+        private void BDOpen_Click(object sender, EventArgs e)
         {
             if (pf != null)
             {
@@ -89,45 +97,31 @@ namespace TechnicalSupport
                 pf = null;
             }
 
-            string filePath = "";
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "txt files (*.txt)|*.txt";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                filePath = ofd.FileName;
-            }
-            if (filePath != "")
-            {
-                var ProblemList = System.IO.File.ReadLines(@filePath).ToList();
-                System.IO.File.WriteAllLines("Problem.txt", ProblemList);
-
-                ProblemButton.Text = "Нажми на меня!";
-                ProblemButton.Enabled = true;
-            }
-        }
-
-        private void dbtarif_Click(object sender, EventArgs e)
-        {
             if (tf != null)
-            { 
+            {
                 tf.Close();
                 tf = null;
             }
-                
-            string filePath = "";
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "txt files (*.txt)|*.txt";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                filePath = ofd.FileName;
-            }
-            if (filePath != "")
-            {
-                var ProblemList = System.IO.File.ReadLines(@filePath).ToList();
-                System.IO.File.WriteAllLines("Tarif.txt", ProblemList);
 
-                TarifButton.Text = "Нажми на меня!";
+            new OpenFileJson().NewFile();
+
+            if (System.IO.File.Exists("JSONFile/DataBase.json"))
+            {
+                ProblemButton.Text = "Решить проблему";
+                TarifButton.Text = "Узнать про тарифы";
+
+                ProblemButton.Enabled = true;
                 TarifButton.Enabled = true;
+
+                ConectionSettings = (SettingsJSON)new WorkWithFileJson().GetJSONDataWithFile(@"JSONFile/DataBase.json", typeof(SettingsJSON));
+
+                phoneTextBox.Text = "";
+                for (int i = 0; i < ConectionSettings.DataBase.Communication.phone.Count; i++)
+                    phoneTextBox.Text += ConectionSettings.DataBase.Communication.phone[i] + "\r\n";
+
+                emailTextBox.Text = "";
+                for (int i = 0; i < ConectionSettings.DataBase.Communication.email.Count; i++)
+                    emailTextBox.Text += ConectionSettings.DataBase.Communication.email[i] + "\r\n";
             }
         }
     }
