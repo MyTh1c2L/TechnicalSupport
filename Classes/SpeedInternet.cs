@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace TechnicalSupport
 {
@@ -12,7 +12,7 @@ namespace TechnicalSupport
 
                 DateTime dt1 = DateTime.Now;
 
-                byte[] data = wc.DownloadData("http://yandex.ru");
+                byte[] data = wc.DownloadData("https://yandex.ru");
 
                 DateTime dt2 = DateTime.Now;
 
@@ -32,5 +32,9 @@ namespace TechnicalSupport
 
             return textspeed;
         }
+
+
+        
     }
+
 }

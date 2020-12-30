@@ -1,4 +1,4 @@
-namespace TechnicalSupport
+﻿namespace TechnicalSupport
 {
     partial class MainForm
     {

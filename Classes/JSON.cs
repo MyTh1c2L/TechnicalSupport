@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace TechnicalSupport
 {
-    class WorkWithFileJson
+    public class WorkWithFileJson
     {
         public object GetJSONDataWithFile(string JsonSettingFilePath, Type JsonDeserializeType)
         {
@@ -19,16 +19,9 @@ namespace TechnicalSupport
                     Obj = JsonConvert.DeserializeObject(jsonFileText, JsonDeserializeType);
                 }
             }
-            else
-            {
-                return "Нет файла";
-            }
             return Obj;
         }
-    }
 
-    class OpenFileJson
-    {
         public void NewFile()
         {
             string filePath = "";

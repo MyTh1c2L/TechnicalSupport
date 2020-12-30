@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
@@ -32,7 +32,7 @@ namespace TechnicalSupport
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (new WorkWithFileJson().GetJSONDataWithFile(@"JSONFile/DataBase.json", typeof(SettingsJSON)) == "Нет файла")
+            if (!System.IO.File.Exists("JSONFile/DataBase.json"))
             {
                 ProblemButton.Text = "База данных не найдена";
                 TarifButton.Text = "База данных не найдена";
@@ -103,7 +103,7 @@ namespace TechnicalSupport
                 tf = null;
             }
 
-            new OpenFileJson().NewFile();
+            new WorkWithFileJson().NewFile();
 
             if (System.IO.File.Exists("JSONFile/DataBase.json"))
             {
